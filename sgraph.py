@@ -1,0 +1,20 @@
+import turtle
+
+def init(size_x=500,size_y=500):
+    wn = turtle.Screen()
+    wn.setup(size_x, size_y)
+    wn.title("graph")
+    wn.setworldcoordinates(-1*(size_x/2),-1*(size_y/2),(size_x/2),(size_y/2))
+    axis_x = turtle.Turtle()
+    axis_x.speed(0)
+    axis_x.penup()
+    axis_x.setpos(-1*(size_x/2),0)
+    axis_x.pendown()
+    axis_x.setpos(size_x/2,0)
+    axis_y = turtle.Turtle()
+    axis_y.speed(0)
+    axis_y.setheading(90)
+    axis_y.penup()
+    axis_y.setpos(0,-1*(size_y/2))
+    axis_y.pendown()
+    axis_y.setpos(0,size_y/2)
